@@ -1,0 +1,351 @@
+/**app.wxss**/
+@import 'components/wux.wxss';
+
+page{
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 10pt;
+  line-height: 150%;
+  min-height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding-bottom: 100rpx;
+  box-sizing: border-box;
+} 
+
+.remind-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 300rpx;
+}
+.remind-img {
+  width: 250rpx;
+  height: 250rpx;
+  padding-bottom: 25rpx;
+}
+.remind-text {
+  font-size: 12pt;
+  line-height: 150%;
+}
+.remind-btn {
+  margin-top: 20rpx;
+  font-size: 9pt;
+  padding: 5rpx 20rpx;
+  text-align: center;
+  background-color: #7acfa6;
+  border-radius: 3px; 
+  border-bottom: 2px solid #4fc08d;
+  color: #fff;
+}
+
+.fix_tip{
+    position: fixed;
+    bottom: 50rpx;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transform: translate3d(0, 80rpx, 0);
+    transition: all .5s cubic-bezier(0.19, 1, 0.22, 1)
+}
+.fix_tip.active{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+.fix_tip text{
+    font-size: 9pt;
+    line-height: 100%;
+    padding: 10rpx 20rpx;
+    border-radius: 10rpx;
+    background: rgba(66,66,66,.6);
+    color: #fff;
+}
+
+.lanshan-studio{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 9pt;
+  line-height: 100%;
+  padding: 9pt 0;
+  text-align: center;
+  opacity: 0.15;
+}
+
+/*  more   */
+.loadingmore {
+  margin-top: 24rpx;
+  text-align: center;
+  margin-bottom: 24rpx;
+}
+
+.more-button {
+  font-size: 0.785714286rem;
+  font-weight: normal;
+  color: #959595;
+  background-color: #eee;
+  background-repeat: repeat-x;
+  margin-top: 30rpx;
+  width: 240rpx;
+  border-radius: 300rpx;
+}
+
+.more-button::after {
+  border:none;
+}
+
+.no-more {
+  color: #757575;
+  font-size: 30rpx;
+  line-height: 1.8rem;
+  margin-bottom: 15rpx;
+  text-align: center;
+  margin-top: 15rpx;
+}
+/*  more  end  */
+tab-shadow {
+  position: fixed;
+  bottom: -99rpx;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  border-top: 1rpx solid #eee;
+  z-index: 9999999;
+  box-shadow: 0 0 30rpx rgba(0, 0, 0, .05);
+}
+
+text {
+  cursor: default;
+  line-height: 1.45em;
+}
+
+page, input, textarea {
+  font-family: "Microsoft YaHei UI", "PingFang SC", -apple-system-font;
+}
+
+.singleline {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+button[type="blue"] {
+  color: #ffffff;
+  background-color: #3688ff;
+}
+
+button[type="blue"]:active,
+button-hover[type="blue"] {
+  color: #ffffff;
+  background-color: #1c78ff !important;
+}
+
+button::after {
+  border: none;
+}
+
+space {
+  flex-grow: 1;
+}
+
+/*
+  Material Design 风格的浮动动作按钮（Floating Action Button）
+  可以使用<fab>，也可用<button class="fab">以兼容表单
+*/
+fab, .fab {
+  position: fixed;
+  right: 40rpx;
+  bottom: 40rpx;
+  width: 109rpx;
+  height: 109rpx;
+  background: #3688ff;
+  border-radius: 50%;
+  display: block;
+  /*box-shadow: 0 8rpx 12rpx rgba(2, 0, 33, .2);*/
+  -webkit-transition: .25s;
+  z-index: 99999999999;
+}
+
+/* 加号 */
+fab::before,
+.fab::before {
+  content: ' ';
+  position: absolute;
+  display: block;
+  right: 35rpx;
+  bottom: 53rpx;
+  width: 40rpx;
+  height: 4rpx;
+  background: #ffffff;
+  -webkit-transition: .25s;
+}
+fab::after,
+.fab::after {
+
+  /* 清除 button::after 原有样式 */
+  top: initial;
+  left: initial;
+  border: none;
+  transform: none;
+  border-radius: none;
+  box-sizing: initial;
+  transform-origin: initial;
+
+  content: ' ';
+  position: absolute;
+  display: block;
+  right: 53rpx;
+  bottom: 35rpx;
+  width: 4rpx;
+  height: 40rpx;
+  background: #ffffff;
+  -webkit-transition: .25s;
+}
+
+/* 叉 */
+fab.close::before,
+.fab.close::before {
+  -webkit-transform: rotate(45deg);
+}
+fab.close::after,
+.fab.close::after {
+  -webkit-transform: rotate(45deg);
+}
+
+/* 对勾 */
+fab.confirm::before,
+.fab.confirm::before {
+  -webkit-transform: rotate(45deg);
+  right: 58rpx;
+  bottom: 44rpx;
+  width: 25rpx;
+}
+fab.confirm::after,
+.fab.confirm::after {
+  -webkit-transform: rotate(45deg);
+  right: 46rpx;
+  bottom: 30rpx;
+  height: 45rpx;
+}
+
+/* Material 点击效果 */
+fab:active,
+.fab:active {
+  background: #1c78ff;
+  /*box-shadow: 0 2rpx 4rpx rgba(2, 0, 33, .2);*/
+  -webkit-transition: .25s;
+}
+
+/* fab 支持 hidden 属性，可动态显示或隐藏 */
+fab.hidden,
+.fab.hidden {
+  bottom: -120rpx;
+}
+
+/* hidden 状态下加号半透明 */
+fab.hidden::before,
+fab.hidden::after,
+.fab.hidden::before,
+.fab.hidden::after {
+  opacity: 0;
+}
+
+.empty-hint {
+  display: block;
+  width: 100%;
+  padding: 35rpx 0;
+  text-align: center;
+  font-size: 28rpx;
+  color: #666;
+  background: #fcfcfc;
+}
+
+wxs {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/*common list  for  index  list page */
+ .content-title {
+  float: right;
+}
+
+ .content-title text {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 30rpx;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #3a4040;
+}
+
+.content-date {
+ 
+  
+ float: right;  
+}
+
+ .content-date image {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+
+ .content-date text {
+  color: #959595;
+  margin-right: 32rpx;
+  font-size: 20rpx;
+  line-height: 1.2;
+  font-weight: normal;
+}
+
+/*common list end */
+/*页面为空的样式*/
+
+.empty_img {
+  height: 115rpx;
+  width: 141rpx;
+}
+
+.t28rpx {
+  font-size: 28rpx;
+  line-height: 42rpx;
+  color: rgb(142, 142, 142);
+}
+
+.imgitem {
+  display: flex;
+  justify-content: center;
+  margin-top: 73rpx;
+  
+}
+
+.txtitem {
+  display: flex;
+  justify-content: center;
+  margin-top: 29rpx;
+  margin-bottom: 29rpx;
+}

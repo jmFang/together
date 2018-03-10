@@ -1,0 +1,278 @@
+/* template/toasts/toasts.wxss */
+
+.page {
+  white-space: normal;
+}
+
+.apply-succeed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  opacity: 0;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.apply-succeed-toast {
+  width: 84%;
+  background-color: #fff;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.apply-succeed-image {
+  width: 158rpx;
+  height: 158rpx;
+  margin: 50rpx auto 30rpx;
+}
+
+.apply-succeed-content {
+  text-align: center;
+  padding-bottom: 30rpx;
+}
+
+.apply-succeed-btn {
+  position: relative;
+  z-index: 100;
+  width: 80%;
+  color: #fff;
+  background: #3dd1a5;
+  margin-bottom: 40rpx;
+}
+
+/*活动二维码弹框*/
+.code-succeed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 99;
+  opacity: 0;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.code-succeed-toast {
+  position: relative;
+  width: 80%;
+  border-radius: 20rpx;
+  background: #fff;
+  margin: 7% 0 0 10%;
+  padding-bottom: 66rpx; 
+  z-index: 100;
+}
+
+.code-club-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 30rpx 0;
+  padding: 60rpx 0 36rpx;
+  font-size: 28rpx;
+}
+
+.code-club-theme {
+  font-size: 36rpx;
+  color: #252525;
+  font-weight: bold;
+  margin-bottom: 41rpx;
+}
+
+.code-club-tip {
+  width: 56rpx;
+  height: 56rpx;
+  border-radius: 50%;
+  margin: 40rpx 0 30rpx;
+  background: #3dd1a5;
+  color: #fff;
+  line-height: 56rpx;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-space{
+  line-height: 48rpx;
+  letter-spacing: -0.6rpx;
+}
+.code-message {
+  margin: 30rpx auto 0;
+}
+
+.code-message-align {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.code-message-logo {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.code-message-icon {
+  position: absolute;
+  top: 75rpx;
+  left: 50%;
+  margin-left: 26rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.code-content-title {
+  text-align: center;
+  padding: 20rpx 30rpx 10rpx;
+}
+
+.code-content-text {
+  text-align: center;
+  font-size: 24rpx;
+}
+
+.code-message-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 360rpx;
+  border: 1rpx solid #e5e5e5;
+}
+
+.code-content-btn {
+  width: 80%;
+  background: #3dd1a5;
+  color: #fff;
+  margin-bottom: 30rpx;
+}
+
+.code-text {
+  opacity: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 14%;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.code-club-position {
+  margin-top: 28%;
+}
+
+.code-span {
+  text-align: center;
+  font-size: 30rpx;
+  color: #b2b2b2;
+  padding-bottom: 20rpx;
+}
+
+.code-close {
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+  width: 32rpx;
+  height: 32rpx;
+  padding: 20rpx;
+}
+
+/*联系信息弹窗*/
+.activity-code-title {
+  text-align: center;
+  padding: 0 11%;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #1a1a1a;
+  line-height: 50rpx;
+  letter-spacing: -0.8rpx;
+}
+
+
+.activity-link-theme {
+  font-size: 30rpx;
+  color: #252525;
+  font-weight: bold;
+  margin-bottom: 41rpx;
+  margin: 0 30rpx;
+  border-bottom: 1rpx solid rgb(230, 230, 230);
+  padding-top: 86rpx;
+  padding-bottom: 20rpx;
+   line-height: 50rpx;
+  letter-spacing: -0.6rpx;
+  text-align: center;
+}
+.activity-flex-wap{
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+}
+.activity-link-txt {
+  text-align: center;
+  font-size: 34rpx;
+  margin: 0 30rpx;
+  color: #1a1a1a;
+  font-weight: bold;
+  padding-top: 50rpx;
+  padding-bottom: 50rpx;
+  line-height: 50rpx;
+  letter-spacing: -0.6rpx;
+}
+.activity-link-img {
+  width: 32px;
+  padding-top: 50rpx;
+  padding-bottom: 50rpx;
+  text-align: center;
+  margin: 0 30rpx;
+  line-height: 50rpx;
+  letter-spacing: -0.6rpx;
+}
+.activity-link-btn{
+  background:#fff;
+ overflow:hidden;
+}
+.activity-link-button{
+  width: 500rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 16px;
+  border: 0 none;
+  background: #118fff;
+  color: #fff;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+
+
+.show-tips {
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  width: 350rpx;
+  margin-top: -40rpx;
+  margin-left: -175rpx;
+  border-radius: 10rpx;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 15rpx 20rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  white-space: wrap;
+  color: white;
+  text-align: center;
+  display: none;
+}

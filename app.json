@@ -1,0 +1,57 @@
+{
+  "pages":[
+    
+    "pages/start/start",
+    "pages/index/index",
+    "pages/post/post",
+    "pages/detail/detail",
+    "pages/search/search",
+    "pages/showinmap/showinmap",
+    "pages/message/message",
+    "pages/logs/logs",
+    "pages/updAct/updAct",
+    "pages/my/projectbrief/projectbrief",
+    "pages/my/aboutus/aboutus",
+    "pages/my/myjoin/myjoin",
+    "pages/my/mylaunch/mylaunch",
+    "pages/my/mycollection/mycollection",
+    "pages/my/issues/issues",
+    "pages/my/more/more",
+    "pages/my/logs/logs"
+  ],
+  "window":{
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#118fff",
+    "navigationBarTitleText": "出发吧，一起",
+    "backgroundColor": "#fff"
+  },
+  "tabBar": {
+    "color": "#9BABBA",
+    "selectedColor": "#495056",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/images/tar-home.png",
+        "selectedIconPath": "static/images/tar-home-on.png"
+      },
+      {
+        "pagePath": "pages/post/post",
+        "text": "发起",
+        "iconPath": "static/images/tar-about.png",
+        "selectedIconPath": "static/images/tar-about-on.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "动态",
+        "iconPath": "static/images/tar-topic.png",
+        "selectedIconPath": "static/images/tar-topic-on.png"
+      }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}
